@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <link rel="stylesheet" href="/CSS Files/Signup.css">
+  <script src="/JS Files/Signup.js"></script>
+  <style>
+    * {
+      text-decoration: none;
+    }
+
+    .navbar {
+      background: green;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-top: 30px;
+      margin: -7px;
+      padding-bottom: 20px;
+      padding-top: 10px;
+    }
+
+    .navdiv {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo a {
+      font-size: 35px;
+      font-weight: 600;
+      color: white;
+    }
+
+    li {
+      list-style: none;
+      display: inline-block;
+    }
+
+    li a {
+      color: white;
+      font-size: 18px;
+      padding-bottom: 5px;
+      font-weight: bold;
+      margin-right: 25px;
+      border-bottom: 0 solid transparent;
+      transition: 0.25s ease-out; 
+    }
+
+    li a:hover {
+      border-bottom: 3px solid white;
+    }
+
+    .navbar .navdiv button {
+      background-color: white;
+      margin-left: 10px;
+      border-radius: 10px;
+      padding: 10px;
+      width: 90px;
+      transition: 0.25s ease-out;
+      
+    }
+    .navbar .navdiv button:hover{
+        box-shadow: 3px 3px 3px rgb(154, 233, 154);
+      
+    }
+
+    .navbar .navdiv button  a:hover {
+      color: rgb(6, 82, 6);
+     
+    }
+
+    .navbar .navdiv button a {
+      color: green;
+      font-weight: bold;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navdiv">
+      <div class="logo"><a href="#">ERa</a></div>
+      <ul>
+        <li><a href="/MainPage.html">Home</a></li>
+        <li><a href="MainPage.html#about">About</a></li>
+        <button><a href="/Components/LoginPage.html">Login</a></button>
+      </ul>
+    </div>
+  </nav>
+
+
+
+  <main class="card-container slideUp-animation">
+    <div class="image-container">
+        <h1 class="company">Register Here</h1>
+        <img src="./Images/signUp.svg" class="illustration" alt="">
+        <p class="quote">Sign up today to get exciting offers..!</p>
+        <a href="#btm" class="mobile-btm-nav">
+            <img src="./Images/dbl-arrow.png" alt="">
+        </a>
+    </div>
+    <form action="" method="">
+        <div class="form-container slideRight-animation">
+
+            <h1 class="form-header">
+                Get started
+            </h1>
+
+            <div class="input-container">
+                <label for="f-name"></label>
+                <input type="text" name="f-name" id="f-name" required>
+                <span>
+                    First name
+                </span>
+                <div class="error"></div>
+            </div>
+
+            <div class="input-container">
+                <label for="l-name"></label>
+                <input type="text" name="l-name" id="l-name" required>
+                <span>
+                    Last name
+                </span>
+                <div class="error"></div>
+            </div>
+
+            <div class="input-container">
+                <label for="mail">
+                </label>
+                <input type="email" name="mail" id="mail" required>
+                <span>
+                    E-mail
+                </span>
+                <div class="error"></div>
+            </div>
+
+            <div class="input-container">
+                <label for="phone">
+                </label>
+                <input type="tel" name="phone" id="phone" required>
+                <span>Phone</span>
+                <div class="error"></div>
+            </div>
+
+            <div class="input-container">
+                <label for="user-password"></label>
+                <input type="password"  name="user-password" id="user-password" class="user-password" required>
+                <span>Password</span>
+                <div class="error"></div>
+            </div>
+
+            <div class="input-container">
+                <label for="user-password-confirm"></label>
+                <input type="password" name="user-password-confirm" id="card-no" class="password-confirmation" required>
+                <span>
+                    Smart Card No
+                </span>
+                <div class="error"></div>
+            </div>
+
+            <div id="btm">
+                <button type="submit" id="sign-up" class="submit-btn">Create Account</button>
+                <p class="btm-text"><a href="/Components/LoginPage.html">
+                    Already have an account..? </a><span class="btm-text-highlighted"> <a href="/Components/MainInterFace.html"> Log in</a></span>
+                </p>
+            </div>
+        </div>
+    </form>
+</main>
+<section class="outro-overlay disabled slideUp-animation">
+    <h1 class="company">Basket <sup>&trade;</sup></h1>
+    <h1 class="outro-greeting">Thank's for signing up..!</h1>
+    <img src="/shape.svg" alt="" class="shape">
+    <img src="/signedUp.svg" alt="" id="signedUp-illustration" class="slideRight-animation">
+    <div class="author-link">
+        &copy;&nbsp;
+        <a href="https://www.0xabdulkhalid.ml/">0xabdulkhalid</a> |
+        <a href="https://www.github.com/0xabdulkhalid/basket-sign-up-form/">Source Code</a>
+    </div>
+</section>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDvInXieLIJpNPkWxAmGynm_vwYeuY5CzI",
+    authDomain: "e-ration-1a5a0.firebaseapp.com",
+    projectId: "e-ration-1a5a0",
+    storageBucket: "e-ration-1a5a0.appspot.com",
+    messagingSenderId: "449840132265",
+    appId: "1:449840132265:web:c2ebdce99c6bd88d4539b8",
+    measurementId: "G-0M9H3GVMXT"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const auth = getAuth();
+  const fname= document.getElementById('f-name');
+  const lname = document.getElementById('l-name');
+  const email = document.getElementById('email');
+  const pno = document.getElementById('phone');
+  const password =document.getElementById('user-password');
+  const cno = document.getElementById('card-no');
+  
+  
+  
+
+
+
+</script>
+
+  
+</body>
+</html>
