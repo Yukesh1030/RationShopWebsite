@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-state=1.0">
+  <title>E-Ration Shop</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="/CSS Files/LoginPage.css">
+  <script src="/Components/LoginPage.js"></script>
+  <style>
+
+    
+
+
+
+    * {
+      text-decoration: none;
+    }
+
+    .navbar {
+      background: green;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-top: -10px;
+      margin: -7px;
+    }
+
+    .navdiv {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo a {
+      font-size: 35px;
+      font-weight: 600;
+      color: white;
+    }
+
+    li {
+      list-style: none;
+      display: inline-block;
+    }
+
+    li a {
+      color: white;
+      font-size: 18px;
+      padding-bottom: 5px;
+      font-weight: bold;
+      margin-right: 25px;
+      border-bottom: 0 solid transparent;
+      transition: 0.25s ease-out; 
+    }
+
+    li a:hover {
+      border-bottom: 3px solid white;
+    }
+
+    .navbar .navdiv button {
+      background-color: white;
+      margin-left: 10px;
+      border-radius: 10px;
+      padding: 10px;
+      width: 90px;
+      transition: 0.25s ease-out;
+      
+    }
+    .navbar .navdiv button:hover{
+        box-shadow: 3px 3px 3px rgb(154, 233, 154);
+      
+    }
+
+    .navbar .navdiv button  a:hover {
+      color: rgb(6, 82, 6);
+     
+    }
+
+    .navbar .navdiv button a {
+      color: green;
+      font-weight: bold;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navdiv">
+      <div class="logo"><a href="#">ERa</a></div>
+      <ul>
+        <li><a href="/MainPage.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <button><a href="/Signup.html">Sign up</a></button>
+      </ul>
+    </div>
+  </nav>
+  
+
+<div class="box-form">
+	<div class="left">
+		<div class="overlay">
+		<h1>Please Login Here.</h1>
+		<p>Affordable Essentials, Stronger Communities</p>
+		</div>
+	</div>
+	
+	
+		<div class="right">
+		<h6>Login</h6>
+		<p>Don't have an account? <a href="/Signup.html" ><abbr title="Create New Account"> Your Account</abbr></a> it takes less than a minute</p>
+		<div class="inputs">
+			<input type="text" id="username" placeholder="user name">
+			<br>
+			<input type="password" id="password" placeholder="password">
+		</div>
+			
+			<br><br>
+			
+		<div class="remember-me--forget-password">
+	<label>
+		<input type="checkbox" name="item" checked/>
+		<span class="text-checkbox">Remember me</span>
+	</label>
+			<p><a href="#"><abbr title="Are You Forget Your password.?">Forget password?</abbr></a></p>
+		</div>
+			
+			<br>
+			<button type="submit" onclick="validation()"><a href="/Components/MainInterFace.html">Login</a></button>
+	</div>
+	
+</div>
+  <script>
+    const a =document.getElementById('username');
+    const b =document.getElementById('password');
+     
+    function validation() {
+        if((a==="user") && (b==='123')){
+            console.log('Hi');
+        }
+        else{
+            console.log('Bye');
+        }
+    }
+    </script>
+</body>
+</html>
