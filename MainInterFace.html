@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Rationshop</title>
+    <link rel="stylesheet" href="/CSS Files/MainInterFace.css">
+    <style>
+        * {
+          text-decoration: none;
+        }
+    
+        .navbar {
+          background: green;
+          font-family: Arial, Helvetica, sans-serif;
+          padding-right: 15px;
+          padding-left: 15px;
+          margin-left: -10px;
+          margin-right: -10px;
+          margin-top: -10px;
+        }
+    
+        .navdiv {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+    
+        .logo a {
+          font-size: 35px;
+          font-weight: 600;
+          color: white;
+        }
+    
+        .navbar .navdiv  li {
+          list-style: none;
+          display: inline-block;
+          gap: 2px;
+        }
+    
+         .navbar .navdiv li a{
+          color: white;
+          font-size: 18px;
+          padding-bottom: 5px;
+          font-weight: bold;
+          margin-right: 25px;
+          border-bottom: 0 solid transparent;
+          transition: 0.25s ease-out; 
+        }
+    
+        .navbar .navdiv li a:hover {
+          border-bottom: 3px solid white;
+        }
+    
+        .navbar .navdiv button {
+          background-color: white;
+          margin-left: 10px;
+          border-radius: 10px;
+          padding: 10px;
+          width: 90px;
+          transition: 0.25s ease-out;
+          
+        }
+        .navbar .navdiv button:hover{
+            box-shadow: 3px 3px 3px rgb(154, 233, 154);
+          
+        }
+    
+        .navbar .navdiv button  a:hover {
+          color: rgb(6, 82, 6);
+         
+        }
+    
+        .navbar .navdiv button a {
+          color: green;
+          font-weight: bold;
+          font-size: 15px;
+        }
+      </style>
+      <script>
+        function Logout(){ alert('You Are Log Outed')}
+      </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="/Components/MainInterFace.html">ERa</a></div>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="/MainPage.html#about">About</a></li>
+            <button id="log-out" onclick="Logout()"><a href="/MainPage.html">Log Out</a></button>
+          </ul>
+        </div>
+    </nav>
+
+    <div class="main-page">
+        
+        <div class="right-side">
+            <marquee class="marquee" direction="left">Tamilnadu State Consumer Help Line 044-28592828 </marquee>
+            <ul>
+                <li>
+                <p>To Know More Information About the Today's Government's Report</p>
+                 <a href="https://www.tnpds.gov.in/pages/godown/godown-stock-position.xhtml" target="_blank">-Click Here</a>
+                 </li>
+                 <li>
+                    <p>To Know More Information About the Today's Government's Report</p>
+                     <a href="https://www.tnpds.gov.in/pages/godown/godown-stock-position.xhtml" target="_blank">-Click Here</a>
+                     </li>
+            </ul>
+        </div>
+
+        <div class="center">
+            <h1>Services</h1><br><br><br><br>
+            <img src="/Images/Homebg.jpg" alt="">
+            <button id="Schedule"><a href="/Components/ProductList.html">Product List</a></button><br><br><br><br>
+            <button id="Schedule"><a href="/Components/Schedule.html">Schedule</a></button>
+
+        </div>
+
+        
+
+    </div>
+
+
+    
+</body>
+</html>
